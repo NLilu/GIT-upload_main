@@ -16,6 +16,7 @@
   --light-grey: #edf0f7;
   --bg-grey: #f9fafc;
   --white: #ffffff;
+  --radius: 8px;
 }
 
 body {
@@ -73,6 +74,7 @@ body {
 
 .red {
   color: var(--primary);
+  font-weight: bold;
 }
 
 .wrapper {
@@ -97,7 +99,7 @@ form.search__bar input[type="text"] {
   font-size: 16px;
   font-family: inherit;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius);
   float: left;
   width: clamp(180px, 20vw, 304px);
   min-height: 48px;
@@ -115,7 +117,7 @@ form.search__bar button {
   background-color: rgba(255, 255, 255, 0.63);
   font-size: 16px;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius);
   cursor: pointer;
   position: absolute;
   top: 5px;
@@ -136,7 +138,7 @@ form.search__bar button:hover {
   display: none;
   height: 48px;
   width: 48px;
-  border-radius: 8px;
+  border-radius: var(--radius);
   margin-left: 12px;
 }
 
@@ -197,7 +199,7 @@ li a:hover {
   position: absolute;
   right: 4px;
   background-color: var(--white);
-  border-radius: 8px;
+  border-radius: var(--radius);
   min-width: 160px;
   margin-top: 20px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -274,7 +276,7 @@ li a:hover {
   .navbar__list.active {
     display: flex;
     background-color: var(--low-grey);
-    border-radius: 8px;
+    border-radius: var(--radius);
   }
 }
 

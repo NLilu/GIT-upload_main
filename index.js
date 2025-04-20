@@ -1,10 +1,22 @@
-// navigation code  -----------------------------------------------------------------------------------
-// dropdown menu
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+// -------------------------------------------------------------------|||||||navigation code|||||||||||||||----------------------------------------------------------------------------
+//
+//
+//
 
-//  Close the dropdown if the user clicks outside of it------------------------------------------------
+// ------------------------------------------------------------------------------dropdown menu and arrow transformation ------------------------------
+const dropdown = document.getElementById("myDropdown");
+const button = document.querySelector(".dropbtn");
+const flip = document.querySelector(".arrow");
+
+button.addEventListener("click", function () {
+  dropdown.classList.toggle("show");
+});
+
+button.addEventListener("click", function () {
+  flip.classList.toggle("transform");
+});
+
+//  ----------------------------------------------------------------------------Closes the dropdown if the user clicks outside of it-----------------------
 window.onclick = function (event) {
   if (!event.target.matches(".dropbtn")) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -18,15 +30,16 @@ window.onclick = function (event) {
   }
 };
 
-//dropdown button arrow toggle-------------------------------------------------------------------------
-function rotate() {
-  document.querySelector(".arrow").classList.toggle("transform");
-}
-
-// burger menu-----------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------burger menu-----------------------------------------------------------------------
 const burger = document.querySelector(".burger__menu");
 const navigation = document.querySelector(".navbar__list");
 
 burger.addEventListener("click", function () {
   navigation.classList.toggle("active");
 });
+
+//
+//
+//
+//
+// -------------------------------------------------------------------------|||||||carousel code|||||||||-----------------------------------------------------------------------
