@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>News page</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="navtop flex">
+        <div class="icons">
+          <a href="https://www.facebook.com/"
+            ><img src="./Images/facebook.png" alt="facebook icon"
+          /></a>
+          <a href="https://x.com/?lang=en"
+            ><img src="./Images/twitter.png" alt="twitter icon"
+          /></a>
+          <a href="https://www.instagram.com/"
+            ><img src="./Images/insta.png" alt="instagram icon"
+          /></a>
+        </div>
+        <h1 class="headline__red">Company Logo</h1>
+        <div class="flex">
+          <form class="search__bar">
+            <input type="text" placeholder="ძიება.." name="search" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          <div class="burger__menu">
+            <img src="./Images/burger menu.png" alt="mobile menu bars" />
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="grey__stripe">
+      <div class="wrapper navigation flex">
+        <nav class="navbar">
+          <ul class="navbar__list flex header__text">
+            <li><a href="">პოლიტიკა</a></li>
+            <li><a href="">საზოგადოება</a></li>
+            <li><a href="">Covid-19</a></li>
+            <li><a href="">სამართალი</a></li>
+            <li><a href="">ბიზნესი & ეკონომიკა</a></li>
+            <li><a href="">კრიმინალი</a></li>
+            <li><a href="">შემთხვევა</a></li>
+            <li><a href="">მსოფლიო</a></li>
+            <li id="sport"><a href="">სპორტი</a></li>
+            <li id="religion"><a href="">რელიგია</a></li>
+            <li id="art"><a href="">ხელოვნება</a></li>
+          </ul>
+        </nav>
+        <nav class="navbar__hidden">
+          <ul>
+            <li class="navbar__secondary">
+              <button onclick="myFunction(); rotate()" class="dropbtn">
+                მეტი<i class="fa fa-caret-down arrow"></i>
+              </button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="#">სპორტი</a>
+                <a href="#">რელიგია</a>
+                <a href="#">ხელოვნება</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <main class="slideshow__container"></main>
+    </div>
+
+    <div class="wrapper">
+      <section class="grid">
+        <article class="news box__shadow"></article>
+
+        <article class="news box__shadow central"></article>
+
+        <article class="news box__shadow"></article>
+
+        <article class="news box__shadow"></article>
+
+        <article class="news box__shadow"></article>
+      </section>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/3903b9ea95.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

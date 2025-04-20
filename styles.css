@@ -1,0 +1,309 @@
+/*----------------------------------------------------general styles -------------------------------------------------------------------*/
+@import url("https://free.bboxtype.com/embedfonts/?family=FiraGO:400,500,600");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */ /*helps to visualise styles and potential overlaps, style issues */
+}
+
+:root {
+  --ff: "FiraGO", sans-serif;
+  --primary: #ff3b30;
+  --dk-grey: #4a5468;
+  --low-grey: #e2e7f0;
+  --light-grey: #edf0f7;
+  --bg-grey: #f9fafc;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--bg-grey);
+  font-family: var(--ff);
+  text-align: left;
+}
+
+.headline__red {
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: bolder;
+  letter-spacing: 0.36px;
+  color: var(--primary);
+}
+.headline__one {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bolder;
+  letter-spacing: 0.35px;
+}
+
+.headline__two {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bolder;
+  letter-spacing: 0.35px;
+}
+
+.headline__three {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.body__text {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+.header__text {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.24px;
+}
+
+.small__text {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  color: var(--dk-grey);
+}
+
+.red {
+  color: var(--primary);
+}
+
+.wrapper {
+  max-width: 1312px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/*--------------------------------------------------------header with logo and search input------------------------------------------------------*/
+.navtop {
+  margin: 0;
+  min-height: 80px;
+  justify-content: space-between;
+}
+
+form.search__bar input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  float: left;
+  width: clamp(180px, 20vw, 304px);
+  min-height: 48px;
+  background: var(--low-grey);
+}
+
+.search__bar {
+  position: relative;
+}
+
+form.search__bar button {
+  max-width: 40px;
+  max-height: 40px;
+  padding: 10.5px;
+  background-color: rgba(255, 255, 255, 0.63);
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 6px;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+form.search__bar button:hover {
+  opacity: 50%;
+}
+
+.burger__menu {
+  display: none;
+  height: 48px;
+  width: 48px;
+  border-radius: 8px;
+  margin-left: 12px;
+}
+
+/*-------------------------------------------------------navigation categories and lists----------------------------------------*/
+.grey__stripe {
+  width: 100%;
+  background-color: var(--light-grey);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  justify-content: space-between;
+}
+
+li a {
+  text-decoration: none;
+  color: var(--dk-grey);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+li a:hover {
+  opacity: 50%;
+}
+
+.navbar__hidden button {
+  display: flex;
+  margin-left: 30px;
+}
+
+.navbar__hidden {
+  display: none;
+}
+
+.dropbtn {
+  background-color: var(--light-grey);
+  color: var(--primary);
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  gap: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 4px;
+  background-color: var(--white);
+  border-radius: 8px;
+  min-width: 160px;
+  margin-top: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  color: black;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.transform {
+  transform: rotate(180deg);
+}
+.show {
+  display: block;
+}
+
+/*-----------------------------------------------------------------carousel----------------------------------------------------------------*/
+
+/*------------------------------------------------------------------grid------------------------------------------------------------------*/
+
+/*--------------------------------------------------------responsive breakpoints and styles-----------------------------------------------*/
+@media (max-width: 1240px) {
+  .wrapper {
+    max-width: 1128px;
+  }
+  #sport,
+  #religion,
+  #art {
+    display: none;
+  }
+
+  .navbar__hidden {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 928px;
+  }
+  .headline__red {
+    font-size: clamp(16px, 2.35vw, 24px);
+    margin-left: 10px;
+  }
+  .icons,
+  .navbar__hidden {
+    display: none;
+  }
+  .grey__stripe {
+    background-color: var(--bg-grey);
+    margin-top: -10px;
+    margin-bottom: -70px;
+  }
+
+  .burger__menu {
+    display: block;
+    position: relative;
+  }
+
+  .navbar__list {
+    display: none;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .navbar__list.active {
+    display: flex;
+    background-color: var(--low-grey);
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .wrapper {
+    max-width: 360px;
+  }
+
+  form.search__bar input[type="text"] {
+    display: none;
+  }
+  .search__bar {
+    height: 44px;
+    width: 44px;
+    background: none;
+    position: relative;
+  }
+
+  form.search__bar button {
+    background-color: var(--light-grey);
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+  }
+  .burger__menu,
+  .burger__menu img {
+    height: 40px;
+    width: 40px;
+  }
+}
