@@ -223,6 +223,69 @@ li a:hover {
 
 /*-----------------------------------------------------------------carousel----------------------------------------------------------------*/
 
+.slideshow__container {
+  position: relative;
+  max-width: 1312px;
+  border-radius: 12px;
+  padding: 24px 0;
+}
+.slide {
+  display: none;
+}
+.card {
+  position: absolute;
+  width: 600px;
+  height: 280px;
+  border: solid var(--white) 1px;
+  border-radius: 10px;
+  background-color: var(--white);
+  bottom: 60px;
+  left: 35px;
+}
+.slideTitle {
+  color: var(--primary);
+}
+.dot {
+  color: var(--dk-grey);
+}
+
+.slideTitle .date {
+  color: var(--dk-grey);
+}
+
+.cardText {
+  font-size: 24px;
+  font-weight: 600;
+  padding-top: 40px;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 90px;
+  left: 360px;
+  z-index: 1;
+  border: solid var(--light-grey) 1px;
+  border-radius: 8px;
+  background-color: var(--light-grey);
+  width: 113px;
+  height: 40px;
+}
+.prev,
+.next {
+  color: var(--dk-grey);
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  user-select: none;
+  padding: 8px;
+}
+.slideNumb {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+}
 /*------------------------------------------------------------------grid------------------------------------------------------------------*/
 
 /*--------------------------------------------------------responsive breakpoints and styles-----------------------------------------------*/
