@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>News page</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="topper flex">
+        <div class="icons">
+          <img src="./Images/facebook.png" alt="facebook icon" /> <img src="./Images/twitter.png" alt="twitter icon" /> <img src="./Images/insta.png" alt="instagram icon" />
+        </div>
+        <div class="logo headline__red"><p>Company Logo</p></div>
+        <!-- <div><input type="text" placeholder=""></div> -->
+        <form class="search__bar">
+          <input type="text" placeholder="ძიება.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+      </header>
+    </div>
+    <div class="grey__stripe">
+      <div class="wrapper">
+        <nav class="navbar">
+          <ul class="navbar__list flex header__text" >
+            <li><a href="">პოლიტიკა</a></li>
+            <li><a href="">საზოგადოება</a></li>
+            <li><a href="">Covid-19</a></li>
+            <li><a href="">სამართალი</a></li>
+            <li><a href="">ბიზნესი & ეკონომიკა</a></li>
+            <li><a href="">კრიმინალი</a></li>
+            <li><a href="">შემთხვევა</a></li>
+            <li><a href="">მსოფლიო</a></li>
+            <li><a href="">სპორტი</a></li>
+            <li><a href="">რელიგია</a></li>
+            <li><a href="">ხელოვნება</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="wrapper">
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="./Images/slider (1).png">
+          <div class="text"><p>პოლიტიკა 20.20.20</p>
+            <p>ქვემო ქართლის რეგიონში 20 მლნ ლარამდე ღირებულების სამელიორაციო ინფრასტრუქტურული პროექტები დაიწყება</p>
+
+
+          </div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="./Images/slider (2).png">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="./Images/slider (3).png">
+          <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img src="./Images/slider (4).png">
+          <div class="text">Caption Four</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+   </div>       
+    </main>
+
+<div class="wrapper">
+<section class="grid"> 
+  
+  <article class="news box__shadow">
+    <div class="news__item--img">
+      <img src="./Images/moon.png" alt="moon phases"/>
+    </div>
+        <div class="news__item--text">
+          <p class="small__text">პოლიტიკა &bull; 18.04.2023</p>
+          <p class="headline__three">კიმ ჩენ ინი აშშ-სა და სამხრეთ კორეას ბირთვული იარაღით</p>
+    </div>
+  </article>
+
+  <article class="news box__shadow central">
+    <div class=news__item--img>
+      <img src="./Images/abstract_black.png" alt="abstract drawing dark"/>
+    </div>
+        <div class="news__item--text">
+          <p class="small__text">პოლიტიკა &bull; 18.04.2023</p>
+          <p class="headline__three">ჩრდილოეთ კორეამ აშშ-სა და სამხრეთ კორეის წინააღმდეგ იმიტირებული ბირთვული კონტრშეტევა დაიწყო</p>
+          <div>
+          <p class="small__text">ახალი ამბები</p>
+        </div>
+    </div>
+  </article>
+
+  <article class="news box__shadow">
+    <div class=news__item--img>
+      <img src="./Images/abstract_white.png" alt="abstract drawing light"/>
+    </div>
+        <div class="news__item--text">
+          <p class="small__text">პოლიტიკა &bull; 18.04.2023</p>
+          <p class="headline__three">დღეს კობის სკრინინგის მხარდამჭერი კონცერტი</p>
+    </div>
+  </article>
+
+  <article class="news box__shadow">
+    <div class="news__item--img">
+      <img src="./Images/clock.png" alt="clock on a wall"/>
+    </div>
+        <div class="news__item--text">
+          <p class="small__text">პოლიტიკა &bull; 18.04.2023</p>
+          <p class="headline__three">საქართველოს მორაგბეთა ნაკრები "რაგბი ევროს" გამარჯვებულია</p>
+    </div>
+  </article>  
+
+  <article class="news box__shadow">
+    <div class=news__item--img>
+      <img src="./Images/doors.png" alt="colorful doors"/>
+    </div>
+        <div class="news__item--text">
+          <p class="small__text">პოლიტიკა &bull; 18.04.2023</p>
+          <p class="headline__three">უკრაინას კონტრშეტევისთვის მხოლოდ ერთი მცელობა ექნება</p>
+    </div>
+  </article>
+</section>
+</div>
+<script src="https://kit.fontawesome.com/3903b9ea95.js" crossorigin="anonymous"></script>
+   <script src="./index.js"></script>
+  </body>
+</html>
