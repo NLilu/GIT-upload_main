@@ -220,6 +220,76 @@ li a:hover {
 }
 
 /*-----------------------------------------------------------------carousel----------------------------------------------------------------*/
+.slideshow__container {
+  position: relative;
+  max-width: 1312px;
+  border-radius: 12px;
+  padding: 24px 0;
+}
+.slide {
+  display: none;
+}
+.slide img {
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+.card {
+  position: absolute;
+  max-width: 600px;
+  width: 100%;
+  height: 280px;
+  border: solid var(--white) 1px;
+  border-radius: 10px;
+  background-color: var(--white);
+  bottom: 60px;
+  left: 35px;
+  padding: 20px;
+}
+.slideTitle {
+  color: var(--primary);
+}
+.dot {
+  color: var(--dk-grey);
+}
+
+.slideTitle .date {
+  color: var(--dk-grey);
+}
+
+.cardText {
+  font-size: 24px;
+  font-weight: 600;
+  padding-top: 40px;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 90px;
+  left: 360px;
+  z-index: 1;
+  border: solid var(--light-grey) 1px;
+  border-radius: 8px;
+  background-color: var(--light-grey);
+  width: 113px;
+  height: 40px;
+}
+.prev,
+.next {
+  color: var(--dk-grey);
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  user-select: none;
+  padding: 8px;
+}
+.slideNumb {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+}
 
 /*------------------------------------------------------------------grid------------------------------------------------------------------*/
 
@@ -236,6 +306,14 @@ li a:hover {
 
   .navbar__hidden {
     display: block;
+  }
+  .card {
+    max-width: 94%;
+  }
+
+  .controls {
+    bottom: 16px;
+    left: 110px;
   }
 }
 
@@ -276,6 +354,17 @@ li a:hover {
     background-color: var(--low-grey);
     border-radius: 8px;
   }
+  .slideshow__container {
+    margin-top: 40px;
+  }
+  .card {
+    max-width: 92%;
+    height: 40%;
+  }
+  .controls {
+    bottom: 175px;
+    left: 105px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -306,5 +395,42 @@ li a:hover {
     height: 40px;
     width: 40px;
   }
-  /*კარუსელი დამთავრდა*/
+  .controls {
+    background-color: transparent;
+    border: none;
+  }
+  .prev,
+  .next {
+    width: 32px;
+    height: 32px;
+    padding: 1px 8px;
+    border: 1px solid var(--light-grey);
+    border-radius: 8px;
+    background-color: var(--light-grey);
+    position: absolute;
+    bottom: 180px;
+  }
+  .prev {
+    right: 180px;
+  }
+  .next {
+    left: 217px;
+  }
+  .slideshow__container {
+    position: relative;
+    margin-top: 7px;
+  }
+  .slide img {
+    width: 100%;
+  }
+
+  .card {
+    position: static;
+    max-width: 100%;
+    height: auto;
+    margin: 16px auto 0 auto;
+  }
+  #slideNumb {
+    display: none;
+  }
 }
