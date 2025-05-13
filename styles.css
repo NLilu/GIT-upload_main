@@ -268,7 +268,7 @@ li a:hover {
   justify-content: space-around;
   position: absolute;
   bottom: 90px;
-  left: 360px;
+  left: 50px;
   z-index: 1;
   border: solid var(--light-grey) 1px;
   border-radius: 8px;
@@ -312,8 +312,8 @@ li a:hover {
   }
 
   .controls {
-    bottom: 16px;
-    left: 110px;
+    bottom: 76px;
+    left: 60px;
   }
 }
 
@@ -362,14 +362,47 @@ li a:hover {
     height: 40%;
   }
   .controls {
-    bottom: 175px;
-    left: 105px;
+    top: 40px;
+    left: 40px;
+  }
+}
+@media (max-width: 910px) {
+  .slideshow__container {
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+  }
+
+  .cardText {
+    font-size: clamp(16px, 2.35vw, 22px);
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+}
+
+@media (max-width: 554px) {
+  .slideshow__container {
+    margin-top: 7px;
+    position: relative;
+  }
+  .slide img {
+    width: 100%;
+  }
+
+  .card {
+    position: static;
+    max-width: 100%;
+    height: auto;
+    margin: 16px auto 0 auto;
   }
 }
 
 @media (max-width: 360px) {
   .wrapper {
     max-width: 360px;
+    margin: auto;
   }
 
   form.search__bar input[type="text"] {
@@ -417,8 +450,8 @@ li a:hover {
     left: 217px;
   }
   .slideshow__container {
-    position: relative;
     margin-top: 7px;
+    position: relative;
   }
   .slide img {
     width: 100%;
