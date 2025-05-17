@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid red; */ /*helps to visualise styles and potential overlaps, style issues */
 }
 
 :root {
@@ -33,7 +32,7 @@ body {
   color: var(--primary);
 }
 .headline__one {
-  font-size: 24px;
+  font-size: clamp(16px, 2.35vw, 24px);
   line-height: 40px;
   font-weight: bolder;
   letter-spacing: 0.35px;
@@ -181,7 +180,7 @@ li a:hover {
 
 .dropbtn {
   background-color: var(--light-grey);
-  color: var(--primary);
+  color: var(--dk-grey);
   font-size: 16px;
   border: none;
   cursor: pointer;
@@ -208,7 +207,7 @@ li a:hover {
 }
 
 .dropdown-content a {
-  color: black;
+  color: var(--dk-grey);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -223,7 +222,163 @@ li a:hover {
 
 /*-----------------------------------------------------------------carousel----------------------------------------------------------------*/
 
+.slideshow__container {
+  position: relative;
+  max-width: 100%;
+  border-radius: 12px;
+  padding: 24px 0;
+}
+.slide {
+  display: none;
+}
+.slide img {
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+.card {
+  position: absolute;
+  max-width: 95%;
+  height: auto;
+  border: solid var(--white) 1px;
+  border-radius: var(--radius);
+  background-color: var(--white);
+  bottom: 60px;
+  left: 35px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slideTitle {
+  color: var(--primary);
+  font-size: clamp(13px, 1.26vw, 18px);
+}
+.dot {
+  color: var(--dk-grey);
+}
+
+.slideTitle .date {
+  color: var(--dk-grey);
+}
+
+.cardText {
+  margin-bottom: 45px;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  z-index: 1;
+  border: solid var(--light-grey) 1px;
+  border-radius: 8px;
+  background-color: var(--light-grey);
+  width: 113px;
+  height: 40px;
+}
+.prev,
+.next {
+  color: var(--dk-grey);
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  user-select: none;
+  padding: 8px;
+}
+.slideNumb {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+}
+
 /*------------------------------------------------------------------grid------------------------------------------------------------------*/
+.grid {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 32px;
+  margin-bottom: 30px;
+}
+
+.central {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 2;
+}
+
+.grid > article:nth-child(1) {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.grid > article:nth-child(4) {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.grid > article:nth-child(3) {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.grid > article:nth-child(5) {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.news img {
+  width: 100%;
+}
+
+.news__item--text {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.news p {
+  padding-inline: 10px;
+}
+
+.box__shadow {
+  background-color: var(--white);
+  box-shadow: 0 3px 40px rgb(0 0 0 / 0.12);
+  border-radius: var(--radius);
+  transition: transform 0.2s ease;
+}
+
+.box__shadow:hover {
+  transform: translateY(-4px);
+}
+
+.central_para {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.inner__stripe {
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background: var(--low-grey);
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.category__para {
+  margin-bottom: 15px;
+  padding-inline: 30px;
+}
+
+.category__flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding-inline: 30px;
+}
 
 /*--------------------------------------------------------responsive breakpoints and styles-----------------------------------------------*/
 @media (max-width: 1240px) {
@@ -278,6 +433,63 @@ li a:hover {
     background-color: var(--low-grey);
     border-radius: var(--radius);
   }
+
+  .headline__one {
+    line-height: 150%;
+  }
+
+  .slideshow__container {
+    margin-top: 40px;
+  }
+  .card {
+    max-width: 92%;
+    margin-inline: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    left: 4%;
+    bottom: calc(10% + 5px);
+    height: 25%;
+  }
+
+  .cardText {
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+
+  .controls {
+    bottom: 0;
+    top: calc(-240% + 30px);
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .central {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+  }
+
+  .grid > article:nth-child(1) {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  .grid > article:nth-child(4) {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  .grid > article:nth-child(3) {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+  }
+
+  .grid > article:nth-child(5) {
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+  }
 }
 
 @media (max-width: 360px) {
@@ -307,5 +519,77 @@ li a:hover {
   .burger__menu img {
     height: 40px;
     width: 40px;
+  }
+
+  .slideshow__container {
+    overflow: hidden;
+    border-radius: 0;
+  }
+
+  .controls {
+    top: calc(-140% + 30px);
+    background-color: transparent;
+    border: none;
+    width: 170%;
+    left: -35%;
+    margin: 0 auto;
+  }
+
+  .prev,
+  .next {
+    width: 32px;
+    height: 32px;
+    padding: 1px 8px;
+    border: 1px solid var(--light-grey);
+    border-radius: var(--radius);
+    background-color: var(--light-grey);
+  }
+  .card {
+    position: relative;
+    max-width: 100%;
+    border-radius: 0;
+    left: 0;
+    margin-top: 16px;
+    margin-inline: auto;
+  }
+
+  .slideNumb {
+    display: none;
+  }
+
+  .grid {
+    max-width: 90%;
+    grid-template-columns: 1fr;
+    grid-row: repeat (5, 1fr);
+    margin-inline: auto;
+  }
+
+  .central {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+
+  .grid > article:nth-child(1) {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+
+  .grid > article:nth-child(4) {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  .grid > article:nth-child(3) {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+  }
+
+  .grid > article:nth-child(5) {
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 1;
+  }
+  .central_para {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
