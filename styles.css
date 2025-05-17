@@ -224,18 +224,13 @@ li a:hover {
 
 .slideshow__container {
   position: relative;
-<<<<<<< HEAD
   max-width: 100%;
-=======
-  max-width: 1312px;
->>>>>>> 4b84e33060ae0e4e9a9787c76504f534eb780613
   border-radius: 12px;
   padding: 24px 0;
 }
 .slide {
   display: none;
 }
-<<<<<<< HEAD
 .slide img {
   margin: auto;
   max-width: 100%;
@@ -259,20 +254,6 @@ li a:hover {
 .slideTitle {
   color: var(--primary);
   font-size: clamp(13px, 1.26vw, 18px);
-=======
-.card {
-  position: absolute;
-  width: 600px;
-  height: 280px;
-  border: solid var(--white) 1px;
-  border-radius: 10px;
-  background-color: var(--white);
-  bottom: 60px;
-  left: 35px;
-}
-.slideTitle {
-  color: var(--primary);
->>>>>>> 4b84e33060ae0e4e9a9787c76504f534eb780613
 }
 .dot {
   color: var(--dk-grey);
@@ -283,26 +264,15 @@ li a:hover {
 }
 
 .cardText {
-<<<<<<< HEAD
   margin-bottom: 45px;
-=======
-  font-size: 24px;
-  font-weight: 600;
-  padding-top: 40px;
->>>>>>> 4b84e33060ae0e4e9a9787c76504f534eb780613
 }
 .controls {
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: absolute;
-<<<<<<< HEAD
   bottom: 20px;
   left: 10px;
-=======
-  bottom: 90px;
-  left: 360px;
->>>>>>> 4b84e33060ae0e4e9a9787c76504f534eb780613
   z-index: 1;
   border: solid var(--light-grey) 1px;
   border-radius: 8px;
@@ -324,10 +294,6 @@ li a:hover {
   font-weight: 600;
   letter-spacing: 0.35px;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b84e33060ae0e4e9a9787c76504f534eb780613
 /*------------------------------------------------------------------grid------------------------------------------------------------------*/
 .grid {
   display: grid;
