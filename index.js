@@ -67,6 +67,7 @@ function slideShow(n) {
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
+<<<<<<< HEAD
 
   let currentSlide = slides[slideIndex - 1];
   currentSlide.style.display = "block";
@@ -78,6 +79,13 @@ function slideShow(n) {
 }
 
 //--------------------------------------------date generator-------------
+=======
+  slides[slideIndex - 1].style.display = "block";
+  document.getElementById("slideNumb").innerText =
+    slideIndex + "/" + slides.length;
+}
+
+>>>>>>> 4b84e33060ae0e4e9a9787c76504f534eb780613
 const today = new Date();
 const day = String(today.getDate()).padStart(2, "0");
 const month = String(today.getMonth() + 1).padStart(2, "0");
